@@ -3,8 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_hyve/core/common_widgets/app_logo.dart';
 import 'package:learn_hyve/core/common_widgets/circular_next_button.dart';
 import 'package:learn_hyve/core/common_widgets/parent.dart';
-import 'package:learn_hyve/feature/auth/screens/otp_verification_screen.dart';
+
 import 'package:learn_hyve/feature/auth/widgets/phone_text_field.dart';
+import 'package:learn_hyve/screens/otp_verification_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static route() =>

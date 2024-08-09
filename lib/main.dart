@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learn_hyve/feature/auth/screens/welcome_screen.dart';
-import 'package:learn_hyve/feature/home/screens/onboarding_screen.dart';
-
+import 'package:learn_hyve/screens/welcome_screen.dart';
 void main() {
   runApp(const MyApp());
 }

@@ -27,8 +27,8 @@ jobs:
           architecture: x64
 
       - run: flutter build apk --debug
-      - name: Push to Releases
-        uses: ncipollo/release-action@v1
+      - name: Push to Release
+        uses: actions/upload-artifact@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
           tag: v0.0.${{ github.run_number }}
