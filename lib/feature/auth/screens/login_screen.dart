@@ -52,15 +52,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       'Welcome Buddy!',
                       style: GoogleFonts.poppins(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w700,
-                      ),
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black),
                     ),
                     const SizedBox(height: 7),
                     Text(
                       'Let’s create a new space for students',
                       style: GoogleFonts.poppins(
                         fontSize: 14,
+                        color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -69,6 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Enter your phone number ☎',
                       style: GoogleFonts.poppins(
                         fontSize: 20,
+                        color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
                     ),

@@ -14,15 +14,15 @@ class CircularNextButton extends StatelessWidget {
         width: 68,
         height: 68,
         decoration: const BoxDecoration(
-          color: ColorConstants.primaryColor,
+          color: Color.fromRGBO(247, 146, 33, 1),
           shape: BoxShape.circle,
         ),
         child: const Center(
-          child: Icon(
-            Icons.arrow_forward,
-            color: Colors.white,
-          )
-        ),
+            child: Icon(
+          Icons.arrow_forward,
+          color: Colors.white,
+          size: 38,
+        )),
       ),
     );
   }

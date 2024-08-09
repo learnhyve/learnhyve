@@ -31,14 +31,16 @@ class _SwipeToEnterButtonState extends State<SwipeToEnterButton>
     setState(() {
       _buttonPosition += details.delta.dx;
       if (_buttonPosition < 0) _buttonPosition = 0;
-      if (_buttonPosition > MediaQuery.of(context).size.width * 0.8) _buttonPosition = MediaQuery.of(context).size.width - 50 - 27*2;
+      if (_buttonPosition > MediaQuery.of(context).size.width * 0.8)
+        _buttonPosition = MediaQuery.of(context).size.width - 50 - 27 * 2;
     });
   }
 
   void _onPanEnd(DragEndDetails details) {
-    if (_buttonPosition > MediaQuery.of(context).size.width - 50 - 27*2 - 50) {
+    if (_buttonPosition >
+        MediaQuery.of(context).size.width - 50 - 27 * 2 - 50) {
       setState(() {
-        _buttonPosition = MediaQuery.of(context).size.width - 50 - 27*2;
+        _buttonPosition = MediaQuery.of(context).size.width - 50 - 27 * 2;
         onSwipeFunction.call();
         Future.delayed(const Duration(seconds: 2)).then((val) {
           _buttonPosition = 0;
@@ -64,7 +66,7 @@ class _SwipeToEnterButtonState extends State<SwipeToEnterButton>
             borderRadius: BorderRadius.circular(30),
           ),
           alignment: Alignment.center,
-          child:  Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -95,7 +97,7 @@ class _SwipeToEnterButtonState extends State<SwipeToEnterButton>
                 height: 53,
                 decoration: const BoxDecoration(
                   color: ColorConstants.primaryColor,
-                 shape: BoxShape.circle,
+                  shape: BoxShape.circle,
                 ),
                 alignment: Alignment.center,
                 child: Center(

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_hyve/core/common_widgets/app_logo.dart';
 import 'package:learn_hyve/core/common_widgets/circular_next_button.dart';
 import 'package:learn_hyve/core/common_widgets/parent.dart';
+import 'package:learn_hyve/feature/home/screens/onboarding_screen.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpVerificationScreen extends StatefulWidget {
@@ -55,23 +56,25 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                         style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.w700,
+                          color: Colors.black,
                         ),
                       ),
-                      const SizedBox(height: 7),
+                      SizedBox(height: 7),
                       Text(
                         'Just verify your number buddy to stay spam free',
                         style: GoogleFonts.poppins(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
+                          color: Colors.black,
                         ),
                       ),
-                      const SizedBox(height: 26),
+                      SizedBox(height: 26),
                       Text(
                         'Enter OTP from your message 📲',
                         style: GoogleFonts.poppins(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
-                        ),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black),
                       ),
                       const SizedBox(height: 28),
                       Pinput(
@@ -96,9 +99,10 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(23),
+                        padding: EdgeInsets.all(23),
                         child: CircularNextButton(
-                          onTap: () {},
+                          onTap: () =>
+                              Navigator.push(context, OnboardingScreen.route()),
                         ),
                       ),
                     ],

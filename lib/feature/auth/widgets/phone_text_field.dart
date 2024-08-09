@@ -17,6 +17,7 @@ class PhoneTextField extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       maxLength: 10,
+      style: GoogleFonts.poppins(color: Colors.black),
       decoration: InputDecoration(
         counterText: '',
         prefix: Text(
