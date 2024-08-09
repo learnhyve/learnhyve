@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: buildTheme(),
-      home: WelcomeScreen(),
+      home:const WelcomeScreen(),
     );
   }
 }

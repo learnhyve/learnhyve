@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_hyve/core/common_widgets/circular_next_button.dart';
 import 'package:learn_hyve/core/constants/image_constants.dart';
+import 'package:learn_hyve/screens/homescreen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -26,8 +27,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return GestureDetector(
       onTap: () => removeFocus(),
       child: Scaffold(
-        body: Stack(
-          children: [
+        body: Stack(children: [
           Container(
             width: double.maxFinite,
             height: double.maxFinite,
@@ -152,7 +152,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         floatingActionButton: Padding(
           padding: const EdgeInsets.all(8.0),
           child: CircularNextButton(
-            onTap: () {},
+            onTap: () => Navigator.pushReplacement(context, HomeScreen.route()),
           ),
         ),
       ),

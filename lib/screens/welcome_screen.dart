@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:learn_hyve/core/common_widgets/app_logo.dart';
 import 'package:learn_hyve/core/constants/image_constants.dart';
-import 'package:learn_hyve/feature/auth/widgets/swipe_to_enter_button.dart';
+import 'package:learn_hyve/widgets/swipe_to_enter_button.dart';
 import 'package:learn_hyve/screens/login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
