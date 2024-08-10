@@ -1,0 +1,17 @@
+{
+    "author": {
+        "Name": "Ritesh Sharma",
+        "Subject": "History",
+        "Course": "BA 1st year"
+    },
+    "postedAt": "",
+    "description": "",
+    "image": [
+        "Image 1 ",
+        "Image 2",
+        "etc"
+    ],
+    "stars": 0,
+    "downvotes": 0,
+    "replies": []
+}
