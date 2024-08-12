@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_hyve/core/constants/color_constants.dart';
 import 'package:learn_hyve/core/constants/image_constants.dart';
@@ -26,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: mainAppBar(),
         backgroundColor: Color.fromRGBO(233, 240, 243, 1),
         body: SafeArea(
+          bottom: false,
           child: DefaultTabController(
             length: 2,
             child: Column(
@@ -60,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             HomepageRowIcon(
+                              size: 48,
                               title: 'Notes',
                               icon: Image.asset(
                                 ImageConstants.notes,
@@ -68,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color.fromRGBO(255, 109, 112, 1),
                             ),
                             HomepageRowIcon(
+                                size: 48,
                                 title: 'Doubts',
                                 icon: Icon(
                                   Icons.question_mark_sharp,
@@ -75,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 color: Color.fromRGBO(86, 181, 252, 1)),
                             HomepageRowIcon(
+                                size: 48,
                                 title: 'Tests',
                                 icon: Image.asset(
                                   ImageConstants.notes,
@@ -82,13 +87,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 color: Color.fromRGBO(178, 102, 225, 1)),
                             HomepageRowIcon(
+                                size: 48,
                                 title: 'News',
-                                icon: Image.asset(
-                                  ImageConstants.news,
-                                  color: Colors.white,
+                                icon: Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: SvgPicture.asset(
+                                    width: 16,
+                                    ImageConstants.news,
+                                  ),
                                 ),
                                 color: Color.fromRGBO(104, 205, 108, 1)),
                             HomepageRowIcon(
+                              size: 48,
                               title: 'More',
                               icon: Image.asset(
                                 ImageConstants.more,
@@ -110,7 +120,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: TabBar(
                     dividerColor: Colors.transparent,
                     indicatorColor: ColorConstants.primaryColor,
+                    labelColor: Colors.black,
                     indicatorSize: TabBarIndicatorSize.tab,
+                    indicatorPadding:
+                        EdgeInsets.symmetric(horizontal: dw * 0.05),
                     tabs: [
                       Tab(
                         text: 'Feeds',
@@ -122,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: dw,
+                  height: MediaQuery.of(context).size.height / 1.7,
                   child: const TabBarView(
                     children: [NotesTab(), WorkshopsTab()],
                   ),

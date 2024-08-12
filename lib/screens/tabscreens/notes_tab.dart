@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:learn_hyve/widgets/note_widget.dart';
 
 class NotesTab extends StatelessWidget {
   const NotesTab({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-                      'Coming Soon . . .',
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.center,
-                    );
+    return ListView.builder(
+      itemBuilder: (context, index) => NoteWidget(),
+      itemCount: 2,
+    );
   }
 }
