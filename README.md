@@ -1,16 +1,9 @@
-# learn_hyve
+# Learnhyve 
 
-A new Flutter project.
+## Your Ultimate Study Companion! 📚
 
-## Getting Started
+Empowering Students 🎓 | 📖 Study Tips | 📝 Mock Tests | Notes📕 & many more
 
-This project is a starting point for a Flutter application.
+Learn from Experts & Peers | 🧠
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Coming soon to Google Play Store & Apple App Store
