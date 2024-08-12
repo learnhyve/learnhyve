@@ -1,6 +1,6 @@
-# learnhyve
+# Learnhyve 
 
-###Your Ultimate Study Companion! 📚
+## Your Ultimate Study Companion! 📚
 
 Empowering Students 🎓 | 📖 Study Tips | 📝 Mock Tests | Notes📕 & many more
 
