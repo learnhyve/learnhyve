@@ -8,7 +8,7 @@ class NotesTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) => NoteWidget(),
-      itemCount: 2,
+      itemCount: 10,
     );
   }
 }

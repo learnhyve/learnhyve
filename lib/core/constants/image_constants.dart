@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 class ImageConstants {
   ImageConstants._();
 
@@ -14,6 +16,10 @@ class ImageConstants {
   static const String news = '$_path/news.svg';
   static const String more = '$_path/more.png';
   static const String temp_note = '$_path/temp_note.png';
+  static const String share_button = '$_path/share_button.png';
+  static const String comments = '$_path/comments.png';
+  static const String dislike = '$_path/dislike.png';
+  static const String three_dots = '$_path/3dots.svg';
 
   static const String welcomeScreenBackground =
       '$_path/welcome_screen_background.jpg';

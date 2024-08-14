@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_hyve/core/constants/image_constants.dart';
 import 'package:learn_hyve/widgets/home_row.dart';
@@ -12,13 +13,14 @@ class NoteWidget extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.all(16),
-      padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 20),
-      height: dw / 1.4,
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+      height: dw / 1.2,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(18))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,6 +135,7 @@ class NoteWidget extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
+            margin: EdgeInsets.only(bottom: 2.4),
             height: 146,
             decoration: BoxDecoration(
                 boxShadow: [BoxShadow(spreadRadius: 0.1, blurRadius: 0.2)],
@@ -149,23 +152,129 @@ class NoteWidget extends StatelessWidget {
                   Container(
                     color: Color.fromRGBO(255, 255, 255, 0.6),
                   ),
-                  /*  Container(
-                    alignment: Alignment.center,
-                    height: dw * 0.1,
-                    width: dw * 0.3,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(14),
+                  Center(
+                    child: Container(
+                      height: dw * 0.1,
+                      width: dw * 0.3,
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(255, 135, 13, 1),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(14),
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Open Notes',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.inter(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
-                  ), */
+                  ),
                 ],
               );
             }),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  LikeButtonWidget(),
+                  IconButton(
+                      padding: EdgeInsets.zero,
+                      iconSize: 22,
+                      visualDensity:
+                          VisualDensity(horizontal: -4, vertical: -4),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.thumb_down_outlined,
+                        color: Colors.grey,
+                      )),
+                  IconButton(
+                      padding: EdgeInsets.zero,
+                      iconSize: 22,
+                      visualDensity:
+                          VisualDensity(horizontal: -4, vertical: -4),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.comment_outlined,
+                        color: Colors.grey,
+                      )),
+                  Text(
+                    '3 Replies',
+                    style: GoogleFonts.inter(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black87),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                      padding: EdgeInsets.zero,
+                      iconSize: 22,
+                      visualDensity:
+                          VisualDensity(horizontal: -4, vertical: -4),
+                      onPressed: () {},
+                      icon: Image.asset(
+                        ImageConstants.share_button,
+                        height: 16,
+                      )),
+                  IconButton(
+                      padding: EdgeInsets.zero,
+                      iconSize: 20,
+                      visualDensity:
+                          VisualDensity(horizontal: -4, vertical: -4),
+                      onPressed: () {},
+                      icon: SvgPicture.asset(
+                        ImageConstants.three_dots,
+                        height: 16,
+                      )),
+                ],
+              )
+            ],
           )
         ],
       ),
     );
+  }
+}
+
+class LikeButtonWidget extends StatefulWidget {
+  const LikeButtonWidget({
+    super.key,
+  });
+
+  @override
+  State<LikeButtonWidget> createState() => _LikeButtonWidgetState();
+}
+
+class _LikeButtonWidgetState extends State<LikeButtonWidget> {
+  bool liked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+        padding: EdgeInsets.zero,
+        iconSize: 24,
+        visualDensity: VisualDensity(horizontal: -4, vertical: -4),
+        onPressed: () {
+          setState(() {
+            liked = !liked;
+          });
+        },
+        icon: liked
+            ? Icon(
+                Icons.star,
+                color: Colors.yellow,
+              )
+            : Icon(
+                Icons.star_border_outlined,
+                color: Colors.grey,
+              ));
   }
 }
