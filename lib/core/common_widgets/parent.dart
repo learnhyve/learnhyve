@@ -22,7 +22,7 @@ class Parent extends StatelessWidget {
         ),
         child: BackdropFilter(
           filter: ColorFilter.mode(
-              Colors.black.withOpacity(0.7), BlendMode.luminosity),
+              Colors.black.withOpacity(0.8), BlendMode.luminosity),
           child: child,
         ),
       ),

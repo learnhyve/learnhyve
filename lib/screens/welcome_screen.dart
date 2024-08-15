@@ -34,7 +34,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ),
         child: BackdropFilter(
           filter: ColorFilter.mode(
-              Colors.black.withOpacity(0.7), BlendMode.luminosity),
+              Colors.black.withOpacity(0.8), BlendMode.luminosity),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 27),
             child: Column(
