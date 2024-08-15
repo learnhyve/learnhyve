@@ -220,7 +220,6 @@ class NoteWidget extends StatelessWidget {
                       onPressed: () {},
                       icon: Icon(
                         Icons.comment_outlined,
-                        weight: 0.1,
                       )),
                   Text(
                     '3 Replies',

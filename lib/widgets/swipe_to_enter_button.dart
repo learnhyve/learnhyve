@@ -101,8 +101,10 @@ class _SwipeToEnterButtonState extends State<SwipeToEnterButton>
                 ),
                 alignment: Alignment.center,
                 child: Center(
-                  child: Text(
+                  child: /*  Icon(Icons.arrow_forward_ios) */
+                      Text(
                     '>>',
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.inter(
                       fontSize: 22,
                       fontWeight: FontWeight.w700,

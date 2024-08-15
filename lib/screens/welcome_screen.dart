@@ -19,37 +19,38 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final dh = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          width: double.maxFinite,
-          height: double.maxFinite,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(ImageConstants.welcomeScreenBackground),
-              fit: BoxFit.cover,
+      body: Container(
+        width: double.maxFinite,
+        height: dh,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              ImageConstants.welcomeScreenBackground,
             ),
+            fit: BoxFit.fitHeight,
           ),
-          child: BackdropFilter(
-            filter: ColorFilter.mode(
-                Colors.black.withOpacity(0.7), BlendMode.luminosity),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 27),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const SizedBox(height: 35),
-                  const AppLogo(),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 35),
-                    child: SwipeToEnterButton(
-                      onSwipe: () {
-                        Navigator.push(context, LoginScreen.route());
-                      },
-                    ),
+        ),
+        child: BackdropFilter(
+          filter: ColorFilter.mode(
+              Colors.black.withOpacity(0.7), BlendMode.luminosity),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 27),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const SizedBox(height: 35),
+                const AppLogo(),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 35),
+                  child: SwipeToEnterButton(
+                    onSwipe: () {
+                      Navigator.push(context, LoginScreen.route());
+                    },
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
