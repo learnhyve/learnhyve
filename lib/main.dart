@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_hyve/screens/welcome_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -8,6 +9,10 @@ void main() {
 ThemeData buildTheme() {
   final ThemeData base = ThemeData();
   return base.copyWith(
+    iconTheme: IconThemeData(color: Colors.black),
+    iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(
+            iconColor: MaterialStateProperty.all<Color>(Colors.black))),
     hintColor: Colors.red,
     primaryColor: Colors.black,
     colorScheme:
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: buildTheme(),
-      home:const WelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

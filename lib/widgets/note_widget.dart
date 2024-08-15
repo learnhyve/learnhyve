@@ -130,27 +130,47 @@ class NoteWidget extends StatelessWidget {
               style: GoogleFonts.inter(
                   color: Colors.black,
                   fontWeight: FontWeight.w400,
-                  fontSize: 12),
+                  fontSize: 14),
             ),
           ),
           Container(
             alignment: Alignment.center,
             margin: EdgeInsets.only(bottom: 2.4),
             height: 146,
-            decoration: BoxDecoration(
-                boxShadow: [BoxShadow(spreadRadius: 0.1, blurRadius: 0.2)],
-                borderRadius: BorderRadius.all(Radius.circular(18))),
+            decoration: const BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  spreadRadius: 0,
+                  blurRadius: 4,
+                  offset: Offset(0, 1),
+                ),
+              ],
+              borderRadius: BorderRadius.all(
+                Radius.circular(18),
+              ),
+            ),
             child: Builder(builder: (context) {
               return Stack(
                 children: [
                   Align(
-                      alignment: Alignment.center,
+                    alignment: Alignment.center,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(18.0),
                       child: Image.asset(
                         ImageConstants.temp_note,
                         fit: BoxFit.fitWidth,
-                      )),
+                        width: double.infinity,
+                      ),
+                    ),
+                  ),
                   Container(
-                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(18),
+                      ),
+                      color: Color.fromRGBO(255, 255, 255, 0.6),
+                    ),
                   ),
                   Center(
                     child: Container(
@@ -184,15 +204,14 @@ class NoteWidget extends StatelessWidget {
                 children: [
                   LikeButtonWidget(),
                   IconButton(
-                      padding: EdgeInsets.zero,
-                      iconSize: 22,
-                      visualDensity:
-                          VisualDensity(horizontal: -4, vertical: -4),
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.thumb_down_outlined,
-                        color: Colors.grey,
-                      )),
+                    padding: EdgeInsets.zero,
+                    iconSize: 22,
+                    visualDensity: VisualDensity(horizontal: -4, vertical: -4),
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.thumb_down_outlined,
+                    ),
+                  ),
                   IconButton(
                       padding: EdgeInsets.zero,
                       iconSize: 22,
@@ -201,7 +220,7 @@ class NoteWidget extends StatelessWidget {
                       onPressed: () {},
                       icon: Icon(
                         Icons.comment_outlined,
-                        color: Colors.grey,
+                        weight: 0.1,
                       )),
                   Text(
                     '3 Replies',
@@ -259,6 +278,7 @@ class _LikeButtonWidgetState extends State<LikeButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+        color: Colors.black,
         padding: EdgeInsets.zero,
         iconSize: 24,
         visualDensity: VisualDensity(horizontal: -4, vertical: -4),
@@ -274,7 +294,7 @@ class _LikeButtonWidgetState extends State<LikeButtonWidget> {
               )
             : Icon(
                 Icons.star_border_outlined,
-                color: Colors.grey,
+                color: Colors.black,
               ));
   }
 }

@@ -26,6 +26,7 @@ AppBar mainAppBar() {
             height: 28,
           )),
       IconButton(
+          padding: const EdgeInsets.only(right: 16),
           onPressed: () {},
           color: Colors.black,
           icon: Image.asset(
@@ -34,7 +35,7 @@ AppBar mainAppBar() {
             height: 26,
           )),
       SizedBox(
-        width: 8,
+        width: 12,
       )
     ],
   );
